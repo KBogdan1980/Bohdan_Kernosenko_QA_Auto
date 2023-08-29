@@ -17,8 +17,8 @@ class GitHub:
     '''
     # We can improve our code, and combine two methods in one, here is new version
     def get_user(self, username):
-        #r = requests.get(f'https://api.github.com/users/{username}')
-        r = requests.get(r.format('https://api.github.com/users/{username}'))
+        r = requests.get(f'https://api.github.com/users/{username}')
+        #r = requests.get(r.format('https://api.github.com/users/{username}'))
         body = r.json()
 
         return body
