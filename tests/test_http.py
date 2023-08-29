@@ -4,12 +4,12 @@ import requests
 
 @pytest.mark.http
 def test_first_request():
-    r = requests.get('https://api.github.com/zen')
+    r = requests.get("https://api.github.com/zen")
     print(r.format("Response is {r.text}"))
 
 @pytest.mark.http
 def test_second_request():
-    r = requests.get('https://api.github.com/users/defunkt')
+    r = requests.get("https://api.github.com/users/defunkt")
     body = r.json()
     headers = r.headers
 
@@ -20,7 +20,7 @@ def test_second_request():
 
 @pytest.mark.http
 def test_status_code_request():
-    r = requests.get('https://api.github.com/users/sergii_butenko')
+    r = requests.get("https://api.github.com/users/sergii_butenko")
 
     assert r.status_code == 200 #404
 
